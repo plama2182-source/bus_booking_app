@@ -41,54 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD7VOlzscnlREtWEdf-m_azOsxJciybcfg',
-    appId: '1:55875068864:web:a94f4249634c483d609e25',
-    messagingSenderId: '55875068864',
-    projectId: 'busbookingapp-5b81c',
-    authDomain: 'busbookingapp-5b81c.firebaseapp.com',
-    databaseURL: 'https://busbookingapp-5b81c-default-rtdb.firebaseio.com',
-    storageBucket: 'busbookingapp-5b81c.firebasestorage.app',
-    measurementId: 'G-MJ5QXTT1RN',
+    apiKey: 'AIzaSyDeodbej261yvaugFEqmp022C-0VvyXCJE',
+    appId: '1:258109170144:web:486cfbf10faf9d0521cb85',
+    messagingSenderId: '258109170144',
+    projectId: 'demoproject-5aef1',
+    authDomain: 'demoproject-5aef1.firebaseapp.com',
+    storageBucket: 'demoproject-5aef1.firebasestorage.app',
+    measurementId: 'G-HHZN8E98CW',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCYlhbV0jj_Avhe60lmXFha0to-1ALXNYs',
-    appId: '1:55875068864:android:2fdca9c89f5db07f609e25',
-    messagingSenderId: '55875068864',
-    projectId: 'busbookingapp-5b81c',
-    databaseURL: 'https://busbookingapp-5b81c-default-rtdb.firebaseio.com',
-    storageBucket: 'busbookingapp-5b81c.firebasestorage.app',
+    apiKey: 'AIzaSyBC1SVA2c5pFvHWemUGbrB-g5q7ErF-_20',
+    appId: '1:258109170144:android:2c34ad4d1e2a377921cb85',
+    messagingSenderId: '258109170144',
+    projectId: 'demoproject-5aef1',
+    storageBucket: 'demoproject-5aef1.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDPj8sS4J-ZoPEqR4GXCX-jt88lQwRLbjs',
-    appId: '1:55875068864:ios:0fd4d5d326f6e2be609e25',
-    messagingSenderId: '55875068864',
-    projectId: 'busbookingapp-5b81c',
-    databaseURL: 'https://busbookingapp-5b81c-default-rtdb.firebaseio.com',
-    storageBucket: 'busbookingapp-5b81c.firebasestorage.app',
+    apiKey: 'AIzaSyCkIgTLdITXWD4AFH23DPH9nIiK9IX6Q8w',
+    appId: '1:258109170144:ios:69ea702a1e99a35021cb85',
+    messagingSenderId: '258109170144',
+    projectId: 'demoproject-5aef1',
+    storageBucket: 'demoproject-5aef1.firebasestorage.app',
     iosBundleId: 'com.example.busboking',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDPj8sS4J-ZoPEqR4GXCX-jt88lQwRLbjs',
-    appId: '1:55875068864:ios:0fd4d5d326f6e2be609e25',
-    messagingSenderId: '55875068864',
-    projectId: 'busbookingapp-5b81c',
-    databaseURL: 'https://busbookingapp-5b81c-default-rtdb.firebaseio.com',
-    storageBucket: 'busbookingapp-5b81c.firebasestorage.app',
+    apiKey: 'AIzaSyCkIgTLdITXWD4AFH23DPH9nIiK9IX6Q8w',
+    appId: '1:258109170144:ios:69ea702a1e99a35021cb85',
+    messagingSenderId: '258109170144',
+    projectId: 'demoproject-5aef1',
+    storageBucket: 'demoproject-5aef1.firebasestorage.app',
     iosBundleId: 'com.example.busboking',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyD7VOlzscnlREtWEdf-m_azOsxJciybcfg',
-    appId: '1:55875068864:web:0445a27d9c030ab6609e25',
-    messagingSenderId: '55875068864',
-    projectId: 'busbookingapp-5b81c',
-    authDomain: 'busbookingapp-5b81c.firebaseapp.com',
-    databaseURL: 'https://busbookingapp-5b81c-default-rtdb.firebaseio.com',
-    storageBucket: 'busbookingapp-5b81c.firebasestorage.app',
-    measurementId: 'G-2L7Y2ZES8G',
+    apiKey: 'AIzaSyDeodbej261yvaugFEqmp022C-0VvyXCJE',
+    appId: '1:258109170144:web:93e751963927b92f21cb85',
+    messagingSenderId: '258109170144',
+    projectId: 'demoproject-5aef1',
+    authDomain: 'demoproject-5aef1.firebaseapp.com',
+    storageBucket: 'demoproject-5aef1.firebasestorage.app',
+    measurementId: 'G-EE4GEJEBPK',
   );
 
 }

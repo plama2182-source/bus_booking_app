@@ -1,4 +1,3 @@
-import 'package:busboking/demo.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -289,7 +288,7 @@ return Center(
 
                 const SizedBox(height: 10),
 
-                /// 📅 DATE & TIME
+            
                 Row(
                   children: [
                     Expanded(
@@ -331,7 +330,7 @@ return Center(
 
                 const SizedBox(height: 10),
 
-                /// 👤 PASSENGERS
+                
                 for (int i = 0;
                     i < booking["passengers"].length;
                     i++)
@@ -353,7 +352,7 @@ return Center(
 
                 const SizedBox(height: 8),
 
-                /// 💺 SEATS
+             
                 for (int i = 0;
                     i < booking["seatnumber"].length;
                     i++)

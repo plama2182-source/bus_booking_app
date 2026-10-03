@@ -191,7 +191,7 @@ List<Map<String,dynamic>>? list;
               scrollDirection: Axis.horizontal,
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minWidth: constraints.maxWidth, // ✅ FULL WIDTH
+                  minWidth: constraints.maxWidth, 
                 ),
 
                 child: ClipRRect(
@@ -202,7 +202,7 @@ List<Map<String,dynamic>>? list;
                     headingRowHeight: 55,
                     dataRowHeight: 65,
 
-                    // 🔴 Header
+                   
                     headingRowColor: MaterialStateProperty.all(
                       const Color(0xffF44336),
                     ),
@@ -219,7 +219,7 @@ List<Map<String,dynamic>>? list;
                     ),
 
                     columns: const [
-                      DataColumn(label: Text("S.No")),
+                      DataColumn(label: Text("Account")),
                       DataColumn(label: Text("Booking Date")),
                       DataColumn(label: Text("Passenger")),
                       DataColumn(label: Text("Seat")),
@@ -231,7 +231,7 @@ List<Map<String,dynamic>>? list;
                     ],
 
                     rows: bookings.asMap().entries.expand((entry) {
-                      int bookingIndex = entry.key;
+                      
                       var data =
                           entry.value.data() as Map<String, dynamic>;
                       String docId = entry.value.id;
@@ -256,12 +256,40 @@ List<Map<String,dynamic>>? list;
                           ),
 
                           cells: [
-                            DataCell(Text(
-                                "${bookingIndex + 1}.${passengerIndex + 1}", style: const TextStyle(
+                          
+                    
+                     DataCell(
+                              StreamBuilder<DocumentSnapshot>(
+                                stream: db
+                                    .collection("users")
+                                    .doc(data['userId'])
+                                    .snapshots(),
+                                builder: (context, snapshot) {
+                                  if (!snapshot.hasData ||
+                                      !snapshot.data!.exists) {
+                                    return const Text("...");
+                                  }
+
+                                  var user = snapshot.data!.data()
+                                      as Map<String, dynamic>;
+ return Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                  "${user['name']} ", style: const TextStyle(
                      
                       fontWeight: FontWeight.bold,
                     
-                    ))),
+                    )),
+                                             
+                                            ],
+                                          );
+                                 
+                                },
+                              ),
+                            ),
+                    
 
                             DataCell(Text(formatted, style: const TextStyle(
                      
@@ -349,7 +377,7 @@ List<Map<String,dynamic>>? list;
                     
                     )),
                                               Text(
-                                                "Bus: ${bus['busname']}",
+                                                "Bus: ${bus['busname']}-${bus['busNumber']}",
                                                 style: const TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.grey ,fontWeight: FontWeight.bold,),

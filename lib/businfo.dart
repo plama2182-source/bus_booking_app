@@ -306,7 +306,7 @@ busData["reachDate"]=droppingDate;
                               padding: EdgeInsets.all(5),
 
                               child: Text(
-                               bus['busname'],
+                             "${bus['busname']}-${bus['busNumber']}" ,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

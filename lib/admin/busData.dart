@@ -232,6 +232,8 @@ class _busdataState extends State<busdata> {
                     ),
 
                     columns: const [
+                       DataColumn(label: Text("Bus Owner")),
+                       DataColumn(label: Text("Bus Company")),
                       DataColumn(label: Text("Bus Number")),
                       DataColumn(label: Text("Name")),
                       DataColumn(label: Text("Seats")),
@@ -255,13 +257,51 @@ class _busdataState extends State<busdata> {
                         ),
 
                         cells: [
-                          DataCell(Text(bus["busNumber"].toString(), style: const TextStyle(
+                           
+                     DataCell(
+                              StreamBuilder<DocumentSnapshot>(
+                                stream: db
+                                    .collection("users")
+                                    .doc(bus['userId'])
+                                    .snapshots(),
+                                builder: (context, snapshot) {
+                                  if (!snapshot.hasData ||
+                                      !snapshot.data!.exists) {
+                                    return const Text("...");
+                                  }
+
+                                  var user = snapshot.data!.data()
+                                      as Map<String, dynamic>;
+ return Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                  "${user['name']} ", style: const TextStyle(
+                     
+                      fontWeight: FontWeight.bold,
+                    
+                    )),
+                                             
+                                            ],
+                                          );
+                                 
+                                },
+                              ),
+                            ),
+                          DataCell(Text(bus["company"].toString(), style: const TextStyle(
                      
                       fontWeight: FontWeight.bold,
                     
                     ),)),
 
                           DataCell(Text(bus["busname"].toString(), style: const TextStyle(
+                     
+                      fontWeight: FontWeight.bold,
+                    
+                    ),)),
+
+                     DataCell(Text(bus["busNumber"].toString(), style: const TextStyle(
                      
                       fontWeight: FontWeight.bold,
                     
