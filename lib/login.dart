@@ -9,9 +9,8 @@ import 'utils/responsive.dart';
 import 'session.dart';
 import 'package:busboking/admin/dashboard.dart';
 import 'package:busboking/busAdmin/busAdmindashboard.dart';
-
 import 'pendingVerification.dart';
-import 'demoaccount.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -210,18 +209,7 @@ const SizedBox(height: 30),
                 const SizedBox(height: 10),
   const SizedBox(height: 10),
 
-    TextButton.icon(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const DemoAccountsPage(),
-          ),
-        );
-      },
-      icon: const Icon(Icons.visibility),
-      label: const Text('View Demo Accounts'),
-    ),
+   
                 TextButton(
                   onPressed: () {
                     Navigator.push(
